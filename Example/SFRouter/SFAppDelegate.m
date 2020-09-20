@@ -7,12 +7,21 @@
 //
 
 #import "SFAppDelegate.h"
+#import "SFRouter.h"
 
 @implementation SFAppDelegate
+
+SFRouterRegisterAction(SFAppDelegate, @"获取window", mainWindow, UIWindow *) {
+    return [UIApplication sharedApplication].delegate.window;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[NSClassFromString(@"SFViewController") new]];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

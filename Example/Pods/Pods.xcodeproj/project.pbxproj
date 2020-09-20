@@ -1,0 +1,901 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AB00204077CA49D4B71970BDCF84D65 /* SFRouterDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 551D3B5C7B645841C44A994011B713F5 /* SFRouterDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B74B94EAE083E1761688E7D6F76E839 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB524C07CDAD2A637FF130C132A119B2 /* CoreFoundation.framework */; };
+		15084B5B58E76C9604BEF7DD65B1E299 /* Pods-SFRouter_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D39436BD577AE6F29F0D25661A7841 /* Pods-SFRouter_Example-dummy.m */; };
+		1DB25621C00B7869263511D4F35A49F2 /* SFRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 910C05E0A547FC5F473D8201DD4EDBFD /* SFRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2225C17B09CAA9DDE8CBFAB8CEBBCF0D /* SFRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 896015B0E50A78B94178FE5F9DA1B792 /* SFRouter.m */; };
+		268923AEA8B4215D1234EFE507916E74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02365557C88FDB0CE6A6D0C288E722A0 /* Foundation.framework */; };
+		2E19592C6269368D8ED07B2EDBD14E68 /* YYModel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAD4EC20A65E1A985E0F9BEAD9351C1 /* YYModel-dummy.m */; };
+		35FF1D2955EEE2E09D232E40423BD2B2 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 337DA63B3DA00CFCCB8A533965DF2871 /* YYClassInfo.m */; };
+		3A55407A60E590D566EB821FAB5F8811 /* SFRouterRunner.h in Headers */ = {isa = PBXBuildFile; fileRef = D7379E495DA3B4ED44156BD2E919AA9C /* SFRouterRunner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F3915883D8296AC40DD4D9820D7DB34 /* SFRouterModels.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BC170C4EEB47B39DFA9C34DDA41B0 /* SFRouterModels.m */; };
+		432DFD559CB42A04FBC78D25CD9286CD /* YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = D5B0C0EE41A774C51534A28ACFDF123D /* YYModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43D925BFD45EC524871AEB61CA716279 /* SFRouterRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE309E20E4584CED93C1B22837C975A /* SFRouterRunner.m */; };
+		46C4BB39244DD381D4E0B7DE1F4A335D /* SFRouterValueConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 790F1323295B433C3416B1537676BF59 /* SFRouterValueConvert.m */; };
+		657815BD878AB7C109AAF58CE9EA9A4D /* SFRouterConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A5C6F3A4FE0B3F003DD56C7626C0162 /* SFRouterConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A12AEEBA10C0AA3639764DC497DFB27 /* SFRouterLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A3EFFBDB5C0E03830E39B0378C595A7 /* SFRouterLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78350F0823913DF97671E98AD8F99CF0 /* SFRouterModels.h in Headers */ = {isa = PBXBuildFile; fileRef = 64F5D6FD0FFA296E58D6029E7BE12363 /* SFRouterModels.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EDD252B4718D93CDFB805274F7C8B48 /* SFRouterPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 43892F598EF2E036CFC7035E30C5F7AD /* SFRouterPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8671FB0C59D1F49A6FCA7F41D480FB5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02365557C88FDB0CE6A6D0C288E722A0 /* Foundation.framework */; };
+		867960FB2ACD8962BEC6FCAD1E921817 /* YYModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7906683B44529943B3D1C3FC08003499 /* YYModel.framework */; };
+		8B520826F032545032F4918B3A4BCE1E /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BB4F016C3C8115496745004A1DCDB4 /* NSObject+YYModel.m */; };
+		96FDAA2DBAAFAFD4DDF6230A779079EC /* YYModel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B4980500A7814E01E186A9516070B20 /* YYModel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6BC21A8CB132EB92A1A0E27D49A31ED /* YYClassInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0018C5A02B1185AD57C32D7D35318856 /* YYClassInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C02AF777D2671979EF7898DB1744AAD7 /* SFRouterLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E72C9654855D04A3F15F31831ECEDD /* SFRouterLoader.m */; };
+		CAC130FC3AE4E4E2D7B9823DB8A75912 /* SFRouterManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 10B857D0BF5014377FA0F0FDE942DBB4 /* SFRouterManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC5CC5CE7175BBFA64DE16B993A5ACD9 /* NSObject+YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = AA08A279C9FB0BF0BBFD95892635503B /* NSObject+YYModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC4E7BF79EC8A9466DB33543EC1F3A89 /* SFMetamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 65C6FCE07B5F760E840D210AA7F02815 /* SFMetamacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD3E7B132A1C25145C77B80417E32D6D /* SFRouter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 068E917843463356B688907FAADAAE80 /* SFRouter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF1DC1C6D9FF514CA760D1D436293F92 /* SFRouterValueConvert.h in Headers */ = {isa = PBXBuildFile; fileRef = 61C7EDBFF48A015F97A49A1052563943 /* SFRouterValueConvert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF59082E5C9365FD9E88A0104D28A113 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02365557C88FDB0CE6A6D0C288E722A0 /* Foundation.framework */; };
+		F55D21373C9008A0D266187E96932D8A /* Pods-SFRouter_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F336260350A3E010DFAE3CEDAE77607 /* Pods-SFRouter_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6442E32AC6A1C33FC21CBD4A4F23E5A /* SFRouter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ADEF7FF0BE40F780AC0A66E893F5C33 /* SFRouter-dummy.m */; };
+		F6C52EB45D96E9B17B00AF84DA06AA82 /* SFRouterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6B8B515F938B577D23B4762C7DA43A /* SFRouterManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A6AD7815AAFEFA3A75888C01FD1F620A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E749A6EF7647FD9B440665FFBBDBEB1;
+			remoteInfo = SFRouter;
+		};
+		BA57DE69DA8A1285038FAF34232C566D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84B44807A12996D487A4A591A481D6A0;
+			remoteInfo = YYModel;
+		};
+		BC2DD1DE315C892B7AE67C90B1A41547 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84B44807A12996D487A4A591A481D6A0;
+			remoteInfo = YYModel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0018C5A02B1185AD57C32D7D35318856 /* YYClassInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYClassInfo.h; path = YYModel/YYClassInfo.h; sourceTree = "<group>"; };
+		02365557C88FDB0CE6A6D0C288E722A0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		068E917843463356B688907FAADAAE80 /* SFRouter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SFRouter-umbrella.h"; sourceTree = "<group>"; };
+		06926CE8C4C9C7749E231D8A174A70ED /* Pods-SFRouter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SFRouter_Example.release.xcconfig"; sourceTree = "<group>"; };
+		0DF0E31D57FD37CCE036EA8DBB293BF7 /* Pods-SFRouter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SFRouter_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		0F6B8B515F938B577D23B4762C7DA43A /* SFRouterManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SFRouterManager.m; sourceTree = "<group>"; };
+		10A1167C51A26777CF001116A94C98D1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		10B857D0BF5014377FA0F0FDE942DBB4 /* SFRouterManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SFRouterManager.h; sourceTree = "<group>"; };
+		10E72C9654855D04A3F15F31831ECEDD /* SFRouterLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SFRouterLoader.m; sourceTree = "<group>"; };
+		1AC13B2263B576B979404EE3E20499AB /* SFRouter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SFRouter.release.xcconfig; sourceTree = "<group>"; };
+		1E19EEE2B95F52035DA08F0A7E564714 /* YYModel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YYModel.debug.xcconfig; sourceTree = "<group>"; };
+		1E7F632BBE7D2155C32587DD8A9920E6 /* Pods-SFRouter_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SFRouter_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		31195D1238A974078B34EF117DE379D0 /* SFRouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SFRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3250AB88C9F0CA48C20CA4C6A307DAD4 /* Pods-SFRouter_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SFRouter_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		32D4D04BFFCA3DB906015A9FD5F2D233 /* SFRouter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SFRouter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		337DA63B3DA00CFCCB8A533965DF2871 /* YYClassInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYClassInfo.m; path = YYModel/YYClassInfo.m; sourceTree = "<group>"; };
+		35F358C2284D6045F009E6FDA47BFAF3 /* YYModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYModel-prefix.pch"; sourceTree = "<group>"; };
+		3A3EFFBDB5C0E03830E39B0378C595A7 /* SFRouterLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SFRouterLoader.h; sourceTree = "<group>"; };
+		43892F598EF2E036CFC7035E30C5F7AD /* SFRouterPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SFRouterPrivate.h; sourceTree = "<group>"; };
+		488920E63240FB45D1638E5694E006B8 /* SFRouter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SFRouter.debug.xcconfig; sourceTree = "<group>"; };
+		551D3B5C7B645841C44A994011B713F5 /* SFRouterDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SFRouterDefine.h; sourceTree = "<group>"; };
+		5A5C6F3A4FE0B3F003DD56C7626C0162 /* SFRouterConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SFRouterConst.h; sourceTree = "<group>"; };
+		5C7BC170C4EEB47B39DFA9C34DDA41B0 /* SFRouterModels.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SFRouterModels.m; sourceTree = "<group>"; };
+		5DAD4EC20A65E1A985E0F9BEAD9351C1 /* YYModel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YYModel-dummy.m"; sourceTree = "<group>"; };
+		5E974C1E9F55C40BE098E01D2BE87BFE /* SFRouter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SFRouter-prefix.pch"; sourceTree = "<group>"; };
+		61C7EDBFF48A015F97A49A1052563943 /* SFRouterValueConvert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SFRouterValueConvert.h; sourceTree = "<group>"; };
+		64F5D6FD0FFA296E58D6029E7BE12363 /* SFRouterModels.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SFRouterModels.h; sourceTree = "<group>"; };
+		65C6FCE07B5F760E840D210AA7F02815 /* SFMetamacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SFMetamacros.h; sourceTree = "<group>"; };
+		6ADEF7FF0BE40F780AC0A66E893F5C33 /* SFRouter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SFRouter-dummy.m"; sourceTree = "<group>"; };
+		6B4980500A7814E01E186A9516070B20 /* YYModel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYModel-umbrella.h"; sourceTree = "<group>"; };
+		6EBD5FF6F017AD13068A854777E943F6 /* SFRouter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SFRouter.modulemap; sourceTree = "<group>"; };
+		77BB4F016C3C8115496745004A1DCDB4 /* NSObject+YYModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+YYModel.m"; path = "YYModel/NSObject+YYModel.m"; sourceTree = "<group>"; };
+		7906683B44529943B3D1C3FC08003499 /* YYModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YYModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		790F1323295B433C3416B1537676BF59 /* SFRouterValueConvert.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SFRouterValueConvert.m; sourceTree = "<group>"; };
+		81DA769A916AFD6878DA0EC3948024E5 /* YYModel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = YYModel.modulemap; sourceTree = "<group>"; };
+		82BAE36938CDF1A31849FD11EF8B65B9 /* YYModel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YYModel-Info.plist"; sourceTree = "<group>"; };
+		881077C6836F764C32D67E2F530C215A /* Pods-SFRouter_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SFRouter_Example-Info.plist"; sourceTree = "<group>"; };
+		896015B0E50A78B94178FE5F9DA1B792 /* SFRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SFRouter.m; path = SFRouter/Classes/SFRouter.m; sourceTree = "<group>"; };
+		8D35CA9B797424BFFBB0BF2EE4FEE8F8 /* Pods_SFRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SFRouter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F336260350A3E010DFAE3CEDAE77607 /* Pods-SFRouter_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SFRouter_Example-umbrella.h"; sourceTree = "<group>"; };
+		910C05E0A547FC5F473D8201DD4EDBFD /* SFRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SFRouter.h; path = SFRouter/Classes/SFRouter.h; sourceTree = "<group>"; };
+		92D39436BD577AE6F29F0D25661A7841 /* Pods-SFRouter_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SFRouter_Example-dummy.m"; sourceTree = "<group>"; };
+		9754F6013E41974FC1454660D6EFECD9 /* Pods-SFRouter_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SFRouter_Example.modulemap"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AA08A279C9FB0BF0BBFD95892635503B /* NSObject+YYModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+YYModel.h"; path = "YYModel/NSObject+YYModel.h"; sourceTree = "<group>"; };
+		ACE309E20E4584CED93C1B22837C975A /* SFRouterRunner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SFRouterRunner.m; sourceTree = "<group>"; };
+		BD1372EE7AB6AFC2C643E900C3D05A0E /* SFRouter-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SFRouter-Info.plist"; sourceTree = "<group>"; };
+		BD225500AE1B356C0BCE54FF8950B1F6 /* Pods-SFRouter_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SFRouter_Example-frameworks.sh"; sourceTree = "<group>"; };
+		D5B0C0EE41A774C51534A28ACFDF123D /* YYModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYModel.h; path = YYModel/YYModel.h; sourceTree = "<group>"; };
+		D7379E495DA3B4ED44156BD2E919AA9C /* SFRouterRunner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SFRouterRunner.h; sourceTree = "<group>"; };
+		E460D5B0416D36F66EE8EC89E5D2FA0A /* YYModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YYModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB524C07CDAD2A637FF130C132A119B2 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		FD8AEBF4338EE122DC4A7D136FA603D3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FE96AEFC79A5BBB37B813EF66CBABE80 /* YYModel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YYModel.release.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		705CEAE887C427BC5B3763C863DDD9F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8671FB0C59D1F49A6FCA7F41D480FB5F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9382D61146782A45B7C6AB09D841BFCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B74B94EAE083E1761688E7D6F76E839 /* CoreFoundation.framework in Frameworks */,
+				EF59082E5C9365FD9E88A0104D28A113 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6FD0B0ED9A5DAA2B6B74888C29BBF38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				268923AEA8B4215D1234EFE507916E74 /* Foundation.framework in Frameworks */,
+				867960FB2ACD8962BEC6FCAD1E921817 /* YYModel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		133714C049B4117755FBE82F03FF302B /* SFModels */ = {
+			isa = PBXGroup;
+			children = (
+				5A5C6F3A4FE0B3F003DD56C7626C0162 /* SFRouterConst.h */,
+				3A3EFFBDB5C0E03830E39B0378C595A7 /* SFRouterLoader.h */,
+				10E72C9654855D04A3F15F31831ECEDD /* SFRouterLoader.m */,
+				10B857D0BF5014377FA0F0FDE942DBB4 /* SFRouterManager.h */,
+				0F6B8B515F938B577D23B4762C7DA43A /* SFRouterManager.m */,
+				64F5D6FD0FFA296E58D6029E7BE12363 /* SFRouterModels.h */,
+				5C7BC170C4EEB47B39DFA9C34DDA41B0 /* SFRouterModels.m */,
+				D7379E495DA3B4ED44156BD2E919AA9C /* SFRouterRunner.h */,
+				ACE309E20E4584CED93C1B22837C975A /* SFRouterRunner.m */,
+				61C7EDBFF48A015F97A49A1052563943 /* SFRouterValueConvert.h */,
+				790F1323295B433C3416B1537676BF59 /* SFRouterValueConvert.m */,
+			);
+			name = SFModels;
+			path = SFRouter/Classes/SFModels;
+			sourceTree = "<group>";
+		};
+		2CAA6E7887014836B138E4457616B235 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				81DA769A916AFD6878DA0EC3948024E5 /* YYModel.modulemap */,
+				5DAD4EC20A65E1A985E0F9BEAD9351C1 /* YYModel-dummy.m */,
+				82BAE36938CDF1A31849FD11EF8B65B9 /* YYModel-Info.plist */,
+				35F358C2284D6045F009E6FDA47BFAF3 /* YYModel-prefix.pch */,
+				6B4980500A7814E01E186A9516070B20 /* YYModel-umbrella.h */,
+				1E19EEE2B95F52035DA08F0A7E564714 /* YYModel.debug.xcconfig */,
+				FE96AEFC79A5BBB37B813EF66CBABE80 /* YYModel.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/YYModel";
+			sourceTree = "<group>";
+		};
+		389199A9C13CBFCBC3421FBC3C5C8096 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				10A1167C51A26777CF001116A94C98D1 /* LICENSE */,
+				FD8AEBF4338EE122DC4A7D136FA603D3 /* README.md */,
+				32D4D04BFFCA3DB906015A9FD5F2D233 /* SFRouter.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		393A08BFD08230468CAEAFA213BFEF70 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6EBD5FF6F017AD13068A854777E943F6 /* SFRouter.modulemap */,
+				6ADEF7FF0BE40F780AC0A66E893F5C33 /* SFRouter-dummy.m */,
+				BD1372EE7AB6AFC2C643E900C3D05A0E /* SFRouter-Info.plist */,
+				5E974C1E9F55C40BE098E01D2BE87BFE /* SFRouter-prefix.pch */,
+				068E917843463356B688907FAADAAE80 /* SFRouter-umbrella.h */,
+				488920E63240FB45D1638E5694E006B8 /* SFRouter.debug.xcconfig */,
+				1AC13B2263B576B979404EE3E20499AB /* SFRouter.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SFRouter";
+			sourceTree = "<group>";
+		};
+		3CC116EC743D9868CA9EA5D7F9357A0F /* Pods-SFRouter_Example */ = {
+			isa = PBXGroup;
+			children = (
+				9754F6013E41974FC1454660D6EFECD9 /* Pods-SFRouter_Example.modulemap */,
+				3250AB88C9F0CA48C20CA4C6A307DAD4 /* Pods-SFRouter_Example-acknowledgements.markdown */,
+				1E7F632BBE7D2155C32587DD8A9920E6 /* Pods-SFRouter_Example-acknowledgements.plist */,
+				92D39436BD577AE6F29F0D25661A7841 /* Pods-SFRouter_Example-dummy.m */,
+				BD225500AE1B356C0BCE54FF8950B1F6 /* Pods-SFRouter_Example-frameworks.sh */,
+				881077C6836F764C32D67E2F530C215A /* Pods-SFRouter_Example-Info.plist */,
+				8F336260350A3E010DFAE3CEDAE77607 /* Pods-SFRouter_Example-umbrella.h */,
+				0DF0E31D57FD37CCE036EA8DBB293BF7 /* Pods-SFRouter_Example.debug.xcconfig */,
+				06926CE8C4C9C7749E231D8A174A70ED /* Pods-SFRouter_Example.release.xcconfig */,
+			);
+			name = "Pods-SFRouter_Example";
+			path = "Target Support Files/Pods-SFRouter_Example";
+			sourceTree = "<group>";
+		};
+		4814E8DACAA0756DFB9279C42659FAA8 /* SFRouter */ = {
+			isa = PBXGroup;
+			children = (
+				910C05E0A547FC5F473D8201DD4EDBFD /* SFRouter.h */,
+				896015B0E50A78B94178FE5F9DA1B792 /* SFRouter.m */,
+				389199A9C13CBFCBC3421FBC3C5C8096 /* Pod */,
+				6E459C421C01F8616A518FE98867774A /* SFMacros */,
+				133714C049B4117755FBE82F03FF302B /* SFModels */,
+				393A08BFD08230468CAEAFA213BFEF70 /* Support Files */,
+			);
+			name = SFRouter;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		6E459C421C01F8616A518FE98867774A /* SFMacros */ = {
+			isa = PBXGroup;
+			children = (
+				65C6FCE07B5F760E840D210AA7F02815 /* SFMetamacros.h */,
+				551D3B5C7B645841C44A994011B713F5 /* SFRouterDefine.h */,
+				43892F598EF2E036CFC7035E30C5F7AD /* SFRouterPrivate.h */,
+			);
+			name = SFMacros;
+			path = SFRouter/Classes/SFMacros;
+			sourceTree = "<group>";
+		};
+		89A67D3606E9012E9A7F122B91370952 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3CC116EC743D9868CA9EA5D7F9357A0F /* Pods-SFRouter_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A4AEA6E70374E3B540504DB128F5AD5D /* YYModel */ = {
+			isa = PBXGroup;
+			children = (
+				AA08A279C9FB0BF0BBFD95892635503B /* NSObject+YYModel.h */,
+				77BB4F016C3C8115496745004A1DCDB4 /* NSObject+YYModel.m */,
+				0018C5A02B1185AD57C32D7D35318856 /* YYClassInfo.h */,
+				337DA63B3DA00CFCCB8A533965DF2871 /* YYClassInfo.m */,
+				D5B0C0EE41A774C51534A28ACFDF123D /* YYModel.h */,
+				2CAA6E7887014836B138E4457616B235 /* Support Files */,
+			);
+			path = YYModel;
+			sourceTree = "<group>";
+		};
+		BA410A78139F0930AE9F55213BDA38B1 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4814E8DACAA0756DFB9279C42659FAA8 /* SFRouter */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		C38CD4C4770095EAB0225309B4CF1BCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D35CA9B797424BFFBB0BF2EE4FEE8F8 /* Pods_SFRouter_Example.framework */,
+				31195D1238A974078B34EF117DE379D0 /* SFRouter.framework */,
+				E460D5B0416D36F66EE8EC89E5D2FA0A /* YYModel.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				BA410A78139F0930AE9F55213BDA38B1 /* Development Pods */,
+				D3589E12364566A83402A7AB0D63DB3C /* Frameworks */,
+				F8EF2200BE9FEC07CF94B1BF0280D61A /* Pods */,
+				C38CD4C4770095EAB0225309B4CF1BCD /* Products */,
+				89A67D3606E9012E9A7F122B91370952 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D1DFA8ABBC48368F40C5A69E8195963E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				FB524C07CDAD2A637FF130C132A119B2 /* CoreFoundation.framework */,
+				02365557C88FDB0CE6A6D0C288E722A0 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D3589E12364566A83402A7AB0D63DB3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7906683B44529943B3D1C3FC08003499 /* YYModel.framework */,
+				D1DFA8ABBC48368F40C5A69E8195963E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8EF2200BE9FEC07CF94B1BF0280D61A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4AEA6E70374E3B540504DB128F5AD5D /* YYModel */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1D0888B26726146D7874737C0DC4202F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F55D21373C9008A0D266187E96932D8A /* Pods-SFRouter_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		240E3FCF79DF4B1A6DD480320C5EFA8B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC5CC5CE7175BBFA64DE16B993A5ACD9 /* NSObject+YYModel.h in Headers */,
+				B6BC21A8CB132EB92A1A0E27D49A31ED /* YYClassInfo.h in Headers */,
+				96FDAA2DBAAFAFD4DDF6230A779079EC /* YYModel-umbrella.h in Headers */,
+				432DFD559CB42A04FBC78D25CD9286CD /* YYModel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		826A66C82B960A1B98DA99A198E2BF74 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC4E7BF79EC8A9466DB33543EC1F3A89 /* SFMetamacros.h in Headers */,
+				DD3E7B132A1C25145C77B80417E32D6D /* SFRouter-umbrella.h in Headers */,
+				1DB25621C00B7869263511D4F35A49F2 /* SFRouter.h in Headers */,
+				657815BD878AB7C109AAF58CE9EA9A4D /* SFRouterConst.h in Headers */,
+				0AB00204077CA49D4B71970BDCF84D65 /* SFRouterDefine.h in Headers */,
+				6A12AEEBA10C0AA3639764DC497DFB27 /* SFRouterLoader.h in Headers */,
+				CAC130FC3AE4E4E2D7B9823DB8A75912 /* SFRouterManager.h in Headers */,
+				78350F0823913DF97671E98AD8F99CF0 /* SFRouterModels.h in Headers */,
+				7EDD252B4718D93CDFB805274F7C8B48 /* SFRouterPrivate.h in Headers */,
+				3A55407A60E590D566EB821FAB5F8811 /* SFRouterRunner.h in Headers */,
+				EF1DC1C6D9FF514CA760D1D436293F92 /* SFRouterValueConvert.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		16DC2F43692A36B088BC257460D43958 /* Pods-SFRouter_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1823E8BD649F3292A9CA1187DE7CACB8 /* Build configuration list for PBXNativeTarget "Pods-SFRouter_Example" */;
+			buildPhases = (
+				1D0888B26726146D7874737C0DC4202F /* Headers */,
+				214EAFF0424E3F4C568F20D061D0C3F7 /* Sources */,
+				705CEAE887C427BC5B3763C863DDD9F5 /* Frameworks */,
+				DA675C30DA6905B4E5B73C5CE632D41E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E854FD5C81BEDCCEAFD6A86461C6DF0 /* PBXTargetDependency */,
+				50CF8C4BB9727657A240E9DA1F6CF5E3 /* PBXTargetDependency */,
+			);
+			name = "Pods-SFRouter_Example";
+			productName = "Pods-SFRouter_Example";
+			productReference = 8D35CA9B797424BFFBB0BF2EE4FEE8F8 /* Pods_SFRouter_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		84B44807A12996D487A4A591A481D6A0 /* YYModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B98D95283E05D98A197CE638ABD22D89 /* Build configuration list for PBXNativeTarget "YYModel" */;
+			buildPhases = (
+				240E3FCF79DF4B1A6DD480320C5EFA8B /* Headers */,
+				BF9922EB6CC32A1C23185E86044EE17E /* Sources */,
+				9382D61146782A45B7C6AB09D841BFCD /* Frameworks */,
+				0A75167126CCB4BEEF1C459DDB2ACD01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YYModel;
+			productName = YYModel;
+			productReference = E460D5B0416D36F66EE8EC89E5D2FA0A /* YYModel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9E749A6EF7647FD9B440665FFBBDBEB1 /* SFRouter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA82F76BD60F35FFA3EF9B2E57D7FD8E /* Build configuration list for PBXNativeTarget "SFRouter" */;
+			buildPhases = (
+				826A66C82B960A1B98DA99A198E2BF74 /* Headers */,
+				E4BFACDB0F0F7681491C824F311EC41C /* Sources */,
+				C6FD0B0ED9A5DAA2B6B74888C29BBF38 /* Frameworks */,
+				14C8B2CF8B341145AD6A0E8187DF8098 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6ADF6478FBB215FBA470D110DE1E2905 /* PBXTargetDependency */,
+			);
+			name = SFRouter;
+			productName = SFRouter;
+			productReference = 31195D1238A974078B34EF117DE379D0 /* SFRouter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = C38CD4C4770095EAB0225309B4CF1BCD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16DC2F43692A36B088BC257460D43958 /* Pods-SFRouter_Example */,
+				9E749A6EF7647FD9B440665FFBBDBEB1 /* SFRouter */,
+				84B44807A12996D487A4A591A481D6A0 /* YYModel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A75167126CCB4BEEF1C459DDB2ACD01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14C8B2CF8B341145AD6A0E8187DF8098 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA675C30DA6905B4E5B73C5CE632D41E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		214EAFF0424E3F4C568F20D061D0C3F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15084B5B58E76C9604BEF7DD65B1E299 /* Pods-SFRouter_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF9922EB6CC32A1C23185E86044EE17E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B520826F032545032F4918B3A4BCE1E /* NSObject+YYModel.m in Sources */,
+				35FF1D2955EEE2E09D232E40423BD2B2 /* YYClassInfo.m in Sources */,
+				2E19592C6269368D8ED07B2EDBD14E68 /* YYModel-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4BFACDB0F0F7681491C824F311EC41C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6442E32AC6A1C33FC21CBD4A4F23E5A /* SFRouter-dummy.m in Sources */,
+				2225C17B09CAA9DDE8CBFAB8CEBBCF0D /* SFRouter.m in Sources */,
+				C02AF777D2671979EF7898DB1744AAD7 /* SFRouterLoader.m in Sources */,
+				F6C52EB45D96E9B17B00AF84DA06AA82 /* SFRouterManager.m in Sources */,
+				3F3915883D8296AC40DD4D9820D7DB34 /* SFRouterModels.m in Sources */,
+				43D925BFD45EC524871AEB61CA716279 /* SFRouterRunner.m in Sources */,
+				46C4BB39244DD381D4E0B7DE1F4A335D /* SFRouterValueConvert.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		50CF8C4BB9727657A240E9DA1F6CF5E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YYModel;
+			target = 84B44807A12996D487A4A591A481D6A0 /* YYModel */;
+			targetProxy = BC2DD1DE315C892B7AE67C90B1A41547 /* PBXContainerItemProxy */;
+		};
+		6ADF6478FBB215FBA470D110DE1E2905 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YYModel;
+			target = 84B44807A12996D487A4A591A481D6A0 /* YYModel */;
+			targetProxy = BA57DE69DA8A1285038FAF34232C566D /* PBXContainerItemProxy */;
+		};
+		8E854FD5C81BEDCCEAFD6A86461C6DF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SFRouter;
+			target = 9E749A6EF7647FD9B440665FFBBDBEB1 /* SFRouter */;
+			targetProxy = A6AD7815AAFEFA3A75888C01FD1F620A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0A6FAB466F28FE5890E960A0339B220D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 488920E63240FB45D1638E5694E006B8 /* SFRouter.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SFRouter/SFRouter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SFRouter/SFRouter-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SFRouter/SFRouter.modulemap";
+				PRODUCT_MODULE_NAME = SFRouter;
+				PRODUCT_NAME = SFRouter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		169579995A4C2059BFDF8D172198A47B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06926CE8C4C9C7749E231D8A174A70ED /* Pods-SFRouter_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SFRouter_Example/Pods-SFRouter_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SFRouter_Example/Pods-SFRouter_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2B0F12CBF91CABF542E2DD6260DB2387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE96AEFC79A5BBB37B813EF66CBABE80 /* YYModel.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YYModel/YYModel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YYModel/YYModel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YYModel/YYModel.modulemap";
+				PRODUCT_MODULE_NAME = YYModel;
+				PRODUCT_NAME = YYModel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3EAADD8F76FE1FF2E9FA70BF02F53F49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AC13B2263B576B979404EE3E20499AB /* SFRouter.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SFRouter/SFRouter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SFRouter/SFRouter-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SFRouter/SFRouter.modulemap";
+				PRODUCT_MODULE_NAME = SFRouter;
+				PRODUCT_NAME = SFRouter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		52369841408054441099A3B2EC1A314A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DF0E31D57FD37CCE036EA8DBB293BF7 /* Pods-SFRouter_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SFRouter_Example/Pods-SFRouter_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SFRouter_Example/Pods-SFRouter_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6307D2598EABB03DA8079721F3A469C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E19EEE2B95F52035DA08F0A7E564714 /* YYModel.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YYModel/YYModel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YYModel/YYModel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YYModel/YYModel.modulemap";
+				PRODUCT_MODULE_NAME = YYModel;
+				PRODUCT_NAME = YYModel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1823E8BD649F3292A9CA1187DE7CACB8 /* Build configuration list for PBXNativeTarget "Pods-SFRouter_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52369841408054441099A3B2EC1A314A /* Debug */,
+				169579995A4C2059BFDF8D172198A47B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF7227D9B20A1D549000096ACCB23D7 /* Debug */,
+				4BE66A09A74FD25164AAB3C2645B9B93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA82F76BD60F35FFA3EF9B2E57D7FD8E /* Build configuration list for PBXNativeTarget "SFRouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A6FAB466F28FE5890E960A0339B220D /* Debug */,
+				3EAADD8F76FE1FF2E9FA70BF02F53F49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B98D95283E05D98A197CE638ABD22D89 /* Build configuration list for PBXNativeTarget "YYModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6307D2598EABB03DA8079721F3A469C1 /* Debug */,
+				2B0F12CBF91CABF542E2DD6260DB2387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

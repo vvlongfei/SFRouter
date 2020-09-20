@@ -1,0 +1,27 @@
+{
+  "name": "SFRouter",
+  "version": "0.1.0",
+  "summary": "A short description of SFRouter.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/longfei/SFRouter",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "longfei": "vvlongfei@163.com"
+  },
+  "source": {
+    "git": "https://github.com/longfei/SFRouter.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SFRouter/Classes/**/*",
+  "dependencies": {
+    "YYModel": [
+
+    ]
+  }
+}

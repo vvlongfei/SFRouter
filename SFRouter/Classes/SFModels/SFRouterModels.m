@@ -55,4 +55,8 @@ NSString * const SFRouterDomain = @"com.shawnfly.router";
     }
     return error;
 }
+
+- (void)setSelName:(NSString *)selName {
+    _selName = [selName stringByReplacingOccurrencesOfString:@" " withString:@""];
+}
 @end

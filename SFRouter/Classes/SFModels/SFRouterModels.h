@@ -25,6 +25,7 @@ typedef NSString* SFRouterKey;
 @property (nonatomic, assign) BOOL isAction;            ///< 路由是否为action、page
 @property (nonatomic, copy) NSString *className;        ///< 对应类名
 @property (nonatomic, copy) NSString *filePath;         ///< 路由文件路径
+@property (nonatomic, assign) NSInteger lineNum;        ///< 路由对应行
 @property (nonatomic, copy) NSString *returnTypeName;   ///< 返回值类型名
 @property (nonatomic, copy) NSString *returnTypeEncoding;           ///< 返回类型编码
 @property (nonatomic, copy) NSArray<SFRouterParamItem *> *params;   ///< 路由参数

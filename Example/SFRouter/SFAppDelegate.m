@@ -11,7 +11,7 @@
 
 @implementation SFAppDelegate
 
-SFRouterRegisterAction(SFAppDelegate, @"获取window", mainWindow, UIWindow *) {
+SFRouterRegisterAction(@"获取window", mainWindow, UIWindow *) {
     return [UIApplication sharedApplication].delegate.window;
 }
 

@@ -23,6 +23,7 @@ extern NSString * const SFRouterDomain;
             }];
         }
     } else if (![value isKindOfClass:NSString.class]) {
+        // wlf - TODO:  带扩展，该value自data
         if (strcmp(type, @encode(__typeof__(value))) == 0) {
             [invocation setArgument:&value atIndex:(index + 2)];
         } else {
@@ -43,7 +44,7 @@ extern NSString * const SFRouterDomain;
                  [paramItem.typeName hasPrefix:NSStringFromClass(NSArray.class)]) {
             NSError * __autoreleasing convertError;
             data = data ?: [value dataUsingEncoding:NSUTF8StringEncoding];
-            id __autoreleasing jsonObj = [NSJSONSerialization JSONObjectWithData:data
+            id jsonObj = [NSJSONSerialization JSONObjectWithData:data
                                                          options:(NSJSONReadingMutableContainers)
                                                            error:&convertError];
             if (!convertError) {

@@ -8,14 +8,9 @@
 #import "SFRouter.h"
 #import "SFRouterManager.h"
 
-void openPage(UIViewController *sender, UIViewController *pageVC) {
-    [[SFRouterManager sharedManager] openPage:pageVC sender:sender];
-}
-
-
 @implementation SFRouter
 
-+ (void)openPage:(UIViewController *)pageVC sender:(UIViewController *)sender {
++ (void)openPage:(UIViewController *)pageVC sender:(id)sender {
     [[SFRouterManager sharedManager] openPage:pageVC sender:sender];
 }
 

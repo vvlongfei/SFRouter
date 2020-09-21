@@ -34,7 +34,7 @@ SFRouterCreateNameStr(SFRouterParamLineValue, Prefix, SFRouterGetParamNameList(_
 SFRouterCreateNameStr(SFRouterParamOriginValue, Prefix, SFRouterGenerate_ObjC_ParamsList(SFRouter_ObjC_ParamSEL, ##__VA_ARGS__))
 
 /*路由数据写入*/
-#define SFRouterWriteInfo(IsCheck, IsAction, ClassName, RouterTip, RouterKey, ReturnType, ...)  \
+#define SFRouterWriteInfo(IsCheck, IsAction, RouterTip, RouterKey, ReturnType, ...)  \
 + (void) SFRouterCreateLineStrWithParams(SFRouter_regInfo ## RouterKey, ,##__VA_ARGS__) {        \
     __used static SFRouterParam                                                          \
     SFRouterCreateLineStrWithParams(SFRouter_ ## RouterKey, Params[], ##__VA_ARGS__) =          \
@@ -45,8 +45,9 @@ SFRouterCreateNameStr(SFRouterParamOriginValue, Prefix, SFRouterGenerate_ObjC_Pa
         SFRouterCreateLineStrWithParams(SFRouter_ ## RouterKey, SFRouterInfo, ##__VA_ARGS__)    \
         __attribute__ ((used, section (SFRouterSectionData(IsCheck))))                          \
     = {                                                                                         \
-        .className = metamacro_stringify(ClassName),                                            \
-        .filePath = __FILE__ ,                                                                  \
+        .method = __FUNCTION__,                                            \
+        .filePath = __FILE__,                                                                  \
+        .lineNum = __LINE__,                                                                    \
         .key = #RouterKey,                                                                      \
         .keyDescription = RouterTip,                                               \
         .returnTypeName = metamacro_stringify(ReturnType),                                      \

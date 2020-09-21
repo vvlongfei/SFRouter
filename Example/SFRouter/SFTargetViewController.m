@@ -17,7 +17,7 @@
 
 @implementation SFTargetViewController
 
-SFRouterRegisterPage(SFTargetViewController, @"目标页面", target, (NSString *)title, (NSArray *)items, (NSDictionary *)param) {
+SFRouterRegisterPage(@"目标页面", target, (NSString *)title, (NSArray *)items, (NSDictionary *)param, (NSInteger)age) {
     self = [super init];
     if (self) {
         self.title = title;

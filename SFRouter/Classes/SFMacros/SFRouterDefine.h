@@ -10,15 +10,17 @@
 
 #import "SFRouterPrivate.h"
 
-extern void openPage(UIViewController *sender, UIViewController *pageVC);
+extern void openPage(id sender, UIViewController *pageVC);
+extern Class classForRouterKey(NSString *routerKey);
 
 // 注册页面
-#define SFRouterRegisterPage(PageClassName, RouterTip, RouterKey, ...) \
-SFRouterWriteInfo(0, 0, PageClassName, RouterTip, RouterKey, UIViewController *, ##__VA_ARGS__)\
+#define SFRouterRegisterPage(RouterTip, RouterKey, ...) \
+SFRouterWriteInfo(0, 0, RouterTip, RouterKey, UIViewController *, ##__VA_ARGS__)\
 SFRouter_C_Function(Class, get_, RouterKey ## _class) { \
-    return [PageClassName class]; \
+    return classForRouterKey(@metamacro_stringify(RouterKey)); \
 }\
-SFRouter_C_Function(UIViewController *, open_, RouterKey ## _page, (UIViewController *)sender, ##__VA_ARGS__) { \
+SFRouter_C_Function(UIViewController *, open_, RouterKey ## _page, (id)sender, ##__VA_ARGS__) { \
+    Class PageClassName = classForRouterKey(@metamacro_stringify(RouterKey)); \
     UIViewController *pageVC = \
     SFRouterCallObjcAction([PageClassName alloc], UIViewController *, init_, RouterKey, ##__VA_ARGS__); \
     openPage(sender, pageVC); \
@@ -28,14 +30,15 @@ SFRouter_ObjC_Function(0, UIViewController *, init_, RouterKey, ##__VA_ARGS__)
 
 // 使用页面
 #define SFRouterUsePage(RouterKey, ...)\
-SFRouterWriteInfo(1, 0, UnknownClass, @"UnknownTip", RouterKey, UIViewController *, ##__VA_ARGS__)\
+SFRouterWriteInfo(1, 0, @"UnknownTip", RouterKey, UIViewController *, ##__VA_ARGS__)\
 SFRouter_Extern_C_Function(Class, get_, RouterKey ## _class); \
-SFRouter_Extern_C_Function(UIViewController *, open_, RouterKey ## _page, (UIViewController *)sender , ##__VA_ARGS__);
+SFRouter_Extern_C_Function(UIViewController *, open_, RouterKey ## _page, (id)sender , ##__VA_ARGS__);
 
 // action 注册
-#define SFRouterRegisterAction(ClassName, RouterTip, RouterKey, ReturnType, ...)        \
-SFRouterWriteInfo(0, 1, ClassName, RouterTip, RouterKey, ReturnType, ##__VA_ARGS__)\
+#define SFRouterRegisterAction(RouterTip, RouterKey, ReturnType, ...)        \
+SFRouterWriteInfo(0, 1, RouterTip, RouterKey, ReturnType, ##__VA_ARGS__)\
 SFRouter_C_Function(ReturnType, action_, RouterKey, __VA_ARGS__) {                  \
+    Class ClassName = classForRouterKey(@metamacro_stringify(RouterKey)); \
     SFRouterCheckVoid(ReturnType)()(return)                                         \
     SFRouterCallObjcAction(ClassName, ReturnType, action_, RouterKey, ##__VA_ARGS__);      \
 }                                                                                   \
@@ -43,7 +46,7 @@ SFRouter_ObjC_Function(1, ReturnType, action_, RouterKey, ##__VA_ARGS__)
 
 // action方法使用
 #define SFRouterUseAction(RouterKey, ReturnType, ...)\
-SFRouterWriteInfo(1, 1, UnknownClass, @"UnknownTip", RouterKey, ReturnType, ##__VA_ARGS__)\
+SFRouterWriteInfo(1, 1, @"UnknownTip", RouterKey, ReturnType, ##__VA_ARGS__)\
 SFRouter_Extern_C_Function(ReturnType, action_, RouterKey, __VA_ARGS__);
 
 // oc方法调用

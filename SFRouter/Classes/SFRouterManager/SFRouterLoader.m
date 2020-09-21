@@ -124,7 +124,7 @@ typedef NS_ENUM(NSUInteger, SFRouterDataType) {
             infoItem.key = routerInfoKey;
             infoItem.keyDescription = routerInfo.keyDescription;
             infoItem.filePath = [NSString stringWithUTF8String:routerInfo.filePath];
-            infoItem.className = [NSString stringWithUTF8String:routerInfo.className];
+            infoItem.className = [self classNameFromMethod:routerInfo.method];
             infoItem.isAction = routerInfo.isAction;
             infoItem.selName = [NSString stringWithUTF8String:routerInfo.selName];
             infoItem.returnTypeName = [NSString stringWithUTF8String:routerInfo.returnTypeName];
@@ -149,6 +149,14 @@ typedef NS_ENUM(NSUInteger, SFRouterDataType) {
             readerInfoItem(routerInfoKey, infoItem);
         }
     }
+}
+
+- (NSString *)classNameFromMethod:(char const *)method {
+    NSString *_method = [NSString stringWithUTF8String:method];
+    NSUInteger firstEmptyIndex = [_method rangeOfString:@" "].location;
+    
+    NSString *className = [_method substringWithRange:NSMakeRange(2, firstEmptyIndex - 2)];
+    return className;
 }
 
 @end

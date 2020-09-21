@@ -10,6 +10,14 @@
 
 extern NSString * const SFRouterDomain;
 
+void openPage(id sender, UIViewController *pageVC) {
+    [[SFRouterManager sharedManager] openPage:pageVC sender:sender];
+}
+
+Class classForRouterKey(NSString *routerKey) {
+    return [[SFRouterManager sharedManager] classForRouterKey:routerKey];
+}
+
 @interface SFRouterManager ()<SFRouterRunnerDelegate>
 @property SFRouterLoader *routerLoader;
 @end
@@ -37,6 +45,17 @@ extern NSString * const SFRouterDomain;
     [_routerLoader loadRouterData];
 }
 
+- (Class)classForRouterKey:(NSString *)routerKey {
+    if (routerKey.length == 0) {
+        return nil;
+    }
+    SFRouterInfoItem *item = self.routerLoader.routerMap[routerKey];
+    if (!item) {
+        return nil;
+    }
+    return NSClassFromString(item.className);
+}
+
 - (BOOL)canRouterForUrl:(NSString *)url {
     NSURL *optUrl = nil;
     if (self.handleOpenUrlAspect) {
@@ -55,7 +74,7 @@ extern NSString * const SFRouterDomain;
 
 - (void)routerForUrl:(NSString *)url data:(NSDictionary *)data sender:(id)sender {
     NSURL *optUrl = nil;
-    url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]; // nsurl支持中文
+    url = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]; // nsurl支持中文
     if (self.handleOpenUrlAspect) {
         optUrl = self.handleOpenUrlAspect(url);
     }
@@ -68,9 +87,12 @@ extern NSString * const SFRouterDomain;
         }
         return;
     }
-    SFRouterRunner *runner = [SFRouterRunner createRunnerWithUrl:optUrl data:data routerMap:self.routerLoader.routerMap error:nil];
+    NSError *__autoreleasing error;
+    SFRouterRunner *runner = [SFRouterRunner createRunnerWithUrl:optUrl data:data routerMap:self.routerLoader.routerMap error:&error];
     if (runner) {
         [runner runWithDelegate:self sender:sender];
+    } else if (error && self.handleOpenUrlFailed) {
+        self.handleOpenUrlFailed(error);
     }
 }
 

@@ -27,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)prepareLoadRouterData;
 
+- (Class)classForRouterKey:(NSString *)routerKey;
+
 - (BOOL)canRouterForUrl:(NSString *)url;
 
 - (void)routerForUrl:(NSString *)url data:(nullable NSDictionary *)data sender:(nullable id)sender;

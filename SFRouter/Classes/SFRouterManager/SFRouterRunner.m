@@ -45,7 +45,7 @@ extern NSString * const SFRouterDomain;
     [urlParams addEntriesFromDictionary:data];
     
     NSInvocation *invocation = [self getInvocationWithRouterInfo:infoItem data:urlParams error:error];
-    if (error) {
+    if (!invocation) {
         return nil;
     }
     SFRouterRunner *runner = [self new];
@@ -86,7 +86,6 @@ extern NSString * const SFRouterDomain;
             }
             return nil;
         }
-        infoItem.selName =[infoItem.selName stringByReplacingOccurrencesOfString:@" " withString:@""];
         sig = [pageClass instanceMethodSignatureForSelector:NSSelectorFromString(infoItem.selName)];
     }
     

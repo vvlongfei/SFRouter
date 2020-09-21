@@ -37,31 +37,31 @@ SFRouterUseAction(mainWindow, UIWindow *);
         [button addTarget:self action:@selector(tapAction:) forControlEvents:UIControlEventTouchUpInside];
         button;
     })];
-//    NSString *initFunc = @metamacro_stringify_all(, SFRouterRegisterPage(SFTargetViewController, @"目标页面", target, (NSString *)title, (NSArray *)items));
-//    printf([initFunc UTF8String]);
 }
 
-//SFRouterUsePage(target, (NSString *)title, (NSArray *)items);
+SFRouterUsePage(target, (NSString *)title, (NSArray *)items, (NSDictionary *)param, (NSInteger)age);
 
 - (void)tapAction:(id)sender {
 //    open_target_page(self, @"我来了");
     
     NSData *data = [@"longfei" dataUsingEncoding:(NSUTF8StringEncoding)];
     NSString *url = [NSString stringWithFormat:@"feiyu://target?title=%@", [data base64EncodedStringWithOptions:0]];
-    NSArray *titles = @[@"飞羽", @"龙龙", @"天折"];
-    NSDictionary *param = @{@"title":@"zheyu"};
-    NSString *url2 = [NSString stringWithFormat:@"feiyu://target?title=龙飞&items=%@&param=%@", [titles yy_modelToJSONString], [param yy_modelToJSONString]];;
+    NSString *titles = [[[@[@"飞羽", @"龙龙", @"天折"] yy_modelToJSONString] dataUsingEncoding:NSUTF8StringEncoding] base64EncodedStringWithOptions:0];
+    NSString *param = [[[@{@"title":@"zheyu"} yy_modelToJSONString] dataUsingEncoding:NSUTF8StringEncoding] base64EncodedStringWithOptions:0];
+    NSString *url2 = [NSString stringWithFormat:@"feiyu://target?title=龙飞&items=%@&param=%@&age=10", titles, param];;
     
-    [SFRouter routerForUrl:url2];
+//    [SFRouter routerForUrl:url2];
+    open_target_page(self, @"天之蓝", @[@"飞羽", @"龙龙", @"天折"], @{@"title":@"zheyu"}, 10);
+    
 }
 
-SFRouterRegisterAction(SFViewController, @"", sf_alert, void) {
-    [[UIApplication sharedApplication].keyWindow addSubview:({
-        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(30, 30, 100, 100)];
-        view.backgroundColor = [UIColor redColor];
-        view;
-    })];
-}
+//SFRouterRegisterAction(@"", sf_alert, void) {
+//    [[UIApplication sharedApplication].keyWindow addSubview:({
+//        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(30, 30, 100, 100)];
+//        view.backgroundColor = [UIColor redColor];
+//        view;
+//    })];
+//}
 
 
 @end

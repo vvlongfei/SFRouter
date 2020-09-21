@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SFRouter : NSObject
 
-+ (void)openPage:(UIViewController *)pageVC sender:(UIViewController *)sender;
++ (void)openPage:(UIViewController *)pageVC sender:(id)sender;
 
 + (BOOL)canRouterForUrl:(NSString *)url;
 

@@ -14,8 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SFRouterValueConvert : NSObject
 
 /// 根据typeEncoding，转换为NSNumber、
-+ (NSError *)setParam:(NSString *)value index:(NSUInteger)index
-       paramInfo:(SFRouterParamItem *)paramItem forInvocation:(NSInvocation *)invocation;
++ (NSError *)setParam:(id)value index:(NSUInteger)index
+            paramInfo:(SFRouterParamItem *)paramItem forInvocation:(NSInvocation *)invocation;
 
 @end
 

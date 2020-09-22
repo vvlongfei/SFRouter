@@ -19,14 +19,27 @@ extern NSString * const SFRouterDomain;
 
 - (void)runWithDelegate:(id<SFRouterRunnerDelegate>)delegate sender:(nonnull id)sender {
     if (self.infoItem.isAction) {
-        [self.invocation invokeWithTarget:NSClassFromString(self.infoItem.className)];
-        if ([delegate respondsToSelector:@selector(actionFinished)]) {
-            [delegate actionFinished];
+        if ([delegate respondsToSelector:@selector(routerRunner:willCallAction:)]) {
+            [delegate routerRunner:self willCallAction:self.invocation];
         }
-    } else if ([delegate respondsToSelector:@selector(openPage:sender:)]) {
+        // 执行类函数
+        [self.invocation invokeWithTarget:NSClassFromString(self.infoItem.className)];
+        if ([delegate respondsToSelector:@selector(routerRunner:didCalledAction:)]) {
+            [delegate routerRunner:self didCalledAction:self.invocation];
+        }
+    } else if ([delegate respondsToSelector:@selector(routerRunner:openPage:sender:)]) {
         UIViewController *pageVC = [NSClassFromString(self.infoItem.className) alloc];
+        NSParameterAssert(pageVC); // 理论上不会有nil的情况
         [self.invocation invokeWithTarget:pageVC]; // 执行其init函数
-        [delegate openPage:pageVC sender:sender];
+        if ([delegate respondsToSelector:@selector(routerRunner:willOpenPage:sender:)]) {
+            [delegate routerRunner:self willOpenPage:pageVC sender:sender];
+        }
+        // 执行打开page操作
+        [delegate routerRunner:self openPage:pageVC sender:sender];
+        
+        if ([delegate respondsToSelector:@selector(routerRunner:didOpenedPage:sender:)]) {
+            [delegate routerRunner:self didOpenedPage:pageVC sender:sender];
+        }
     }
 }
 

@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SFRouterRunner.h"
+#import <SFRouter/SFRouterRunner.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

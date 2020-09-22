@@ -9,13 +9,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class SFRouterInfoItem;
+@class SFRouterRunner,SFRouterInfoItem;
 
 @protocol SFRouterRunnerDelegate <NSObject>
 
-- (void)openPage:(UIViewController *)pageVC sender:(id)sender;
+@required
+- (void)routerRunner:(SFRouterRunner *)runner openPage:(UIViewController *)pageVC sender:(id)sender;
 
-- (void)actionFinished;
+@optional
+- (void)routerRunner:(SFRouterRunner *)runner willOpenPage:(UIViewController *)pageVC sender:(id)sender;
+- (void)routerRunner:(SFRouterRunner *)runner didOpenedPage:(UIViewController *)pageVC sender:(id)sender;
+
+- (void)routerRunner:(SFRouterRunner *)runner willCallAction:(NSInvocation *)invocation;
+- (void)routerRunner:(SFRouterRunner *)runner didCalledAction:(NSInvocation *)invocation;
 
 @end
 

@@ -7,13 +7,8 @@
 //
 
 #import "SFAppDelegate.h"
-#import "SFRouter.h"
 
 @implementation SFAppDelegate
-
-SFRouterRegisterAction(@"获取window", mainWindow, UIWindow *) {
-    return [UIApplication sharedApplication].delegate.window;
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

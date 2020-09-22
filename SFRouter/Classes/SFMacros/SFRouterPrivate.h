@@ -8,8 +8,8 @@
 #ifndef SFRouterPrivate_h
 #define SFRouterPrivate_h
 
-#import "SFRouterConst.h"
-#import "SFMetamacros.h"
+#import <SFRouter/SFRouterConst.h>
+#import <SFRouter/SFMetamacros.h>
 
 #pragma mark - 路由数据写入
 #define SFRouterParamStruct(INDEX, VALUE)                               \

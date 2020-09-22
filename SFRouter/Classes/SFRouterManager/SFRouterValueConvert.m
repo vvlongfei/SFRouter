@@ -7,13 +7,12 @@
 
 #import "SFRouterValueConvert.h"
 #import "SFRouterModels.h"
-#import "YYModel.h"
 
 extern NSString * const SFRouterDomain;
 
 @implementation SFRouterValueConvert
 
-+ (NSError *)setParam:(NSString *)value index:(NSUInteger)index paramInfo:(SFRouterParamItem *)paramItem forInvocation:(NSInvocation *)invocation {
++ (NSError *)setParam:(id)value index:(NSUInteger)index paramInfo:(SFRouterParamItem *)paramItem forInvocation:(NSInvocation *)invocation {
     NSError *error = nil;
     const char *type = paramItem.typeEncoding.UTF8String;
     if (value == nil) {
@@ -23,9 +22,12 @@ extern NSString * const SFRouterDomain;
             }];
         }
     } else if (![value isKindOfClass:NSString.class]) {
-        // wlf - TODO:  带扩展，该value自data
-        if (strcmp(type, @encode(__typeof__(value))) == 0) {
+        // 如果value不是string值，则表明该值不是不是从URL中解析出来的，而是通过NSDictionry传入的
+        if ([value isKindOfClass:NSNumber.class]) {
+            [self setNumber:value typeEncoding:type index:index forInvocation:invocation];
+        } else if (strcmp(type, @encode(__typeof__(value))) == 0) {
             [invocation setArgument:&value atIndex:(index + 2)];
+            [invocation retainArguments];
         } else {
             error = [NSError errorWithDomain:SFRouterDomain code:-1 userInfo:@{
                 NSLocalizedFailureReasonErrorKey:@"参数类型与value值类型不一致"
@@ -58,7 +60,17 @@ extern NSString * const SFRouterDomain;
                 NSLocalizedFailureReasonErrorKey:@"参数类型不支持URL调用"
             }];
         }
-    } else if (strcmp(type, @encode(double)) == 0) {
+        [invocation retainArguments];
+    } else {
+        NSNumberFormatter *ff = [[NSNumberFormatter alloc]  init];
+        NSNumber *num = [ff numberFromString:value];
+        [self setNumber:num typeEncoding:type index:index forInvocation:invocation];
+    }
+    return error;
+}
+
++ (void)setNumber:(NSNumber *)value typeEncoding:(const char *)type index:(NSUInteger)index  forInvocation:(NSInvocation *)invocation {
+    if (strcmp(type, @encode(double)) == 0) {
         double realValue = value.doubleValue;
         [invocation setArgument:&realValue atIndex:(index + 2)];
     } else if (strcmp(type, @encode(float)) == 0) {
@@ -83,33 +95,22 @@ extern NSString * const SFRouterDomain;
         BOOL realValue = value.boolValue;
         [invocation setArgument:&realValue atIndex:(index + 2)];
     } else if (strcmp(type, @encode(unsigned char)) == 0) {
-        NSNumberFormatter *ff = [[NSNumberFormatter alloc]  init];
-        NSNumber *num = [ff numberFromString:value];
-        u_char realValue = num.unsignedCharValue;
+        u_char realValue = value.unsignedCharValue;
         [invocation setArgument:&realValue atIndex:(index + 2)];
     } else if (strcmp(type, @encode(unsigned int)) == 0) {
-        NSNumberFormatter *ff = [[NSNumberFormatter alloc]  init];
-        NSNumber *num = [ff numberFromString:value];
-        uint realValue = num.unsignedIntValue;
+        uint realValue = value.unsignedIntValue;
         [invocation setArgument:&realValue atIndex:(index + 2)];
     } else if (strcmp(type, @encode(unsigned long)) == 0) {
-        NSNumberFormatter *ff = [[NSNumberFormatter alloc]  init];
-        NSNumber *num = [ff numberFromString:value];
-        u_long realValue = num.unsignedLongValue;
+        u_long realValue = value.unsignedLongValue;
         [invocation setArgument:&realValue atIndex:(index + 2)];
     } else if (strcmp(type, @encode(unsigned long long)) == 0) {
-        NSNumberFormatter *ff = [[NSNumberFormatter alloc]  init];
-        NSNumber *num = [ff numberFromString:value];
-        unsigned long long realValue = num.unsignedLongLongValue;
+        unsigned long long realValue = value.unsignedLongLongValue;
         [invocation setArgument:&realValue atIndex:(index + 2)];
     } else if (strcmp(type, @encode(unsigned short)) == 0) {
-        NSNumberFormatter *ff = [[NSNumberFormatter alloc]  init];
-        NSNumber *num = [ff numberFromString:value];
-        ushort realValue = num.unsignedShortValue;
+        ushort realValue = value.unsignedShortValue;
         [invocation setArgument:&realValue atIndex:(index + 2)];
     }
     [invocation retainArguments];
-    return error;
 }
 
 @end

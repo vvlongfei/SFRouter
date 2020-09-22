@@ -12,16 +12,11 @@
     "longfei": "vvlongfei@163.com"
   },
   "source": {
-    "git": "https://github.com/longfei/SFRouter.git",
+    "git": "https://github.com/vvlongfei/SFRouter.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "SFRouter/Classes/**/*",
-  "dependencies": {
-    "YYModel": [
-
-    ]
-  }
+  "source_files": "SFRouter/Classes/**/*"
 }

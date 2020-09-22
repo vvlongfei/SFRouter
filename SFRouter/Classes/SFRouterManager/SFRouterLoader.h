@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SFRouterModels.h"
+#import <SFRouter/SFRouterModels.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -67,7 +67,10 @@ Class classForRouterKey(NSString *routerKey) {
     if ([optUrl.scheme hasPrefix:@"http"]) {
         return self.openH5Page ? YES : NO;
     }
-    SFRouterRunner *runner = [SFRouterRunner createRunnerWithUrl:optUrl data:nil routerMap:self.routerLoader.routerMap error:nil];
+    SFRouterRunner *runner = [SFRouterRunner createRunnerWithUrl:optUrl
+                                                            data:nil
+                                                       routerMap:self.routerLoader.routerMap
+                                                           error:nil];
     
     return runner ? YES : NO;
 }
@@ -88,7 +91,10 @@ Class classForRouterKey(NSString *routerKey) {
         return;
     }
     NSError *__autoreleasing error;
-    SFRouterRunner *runner = [SFRouterRunner createRunnerWithUrl:optUrl data:data routerMap:self.routerLoader.routerMap error:&error];
+    SFRouterRunner *runner = [SFRouterRunner createRunnerWithUrl:optUrl
+                                                            data:data
+                                                       routerMap:self.routerLoader.routerMap
+                                                           error:&error];
     if (runner) {
         [runner runWithDelegate:self sender:sender];
     } else if (error && self.handleOpenUrlFailed) {
@@ -118,11 +124,6 @@ Class classForRouterKey(NSString *routerKey) {
     }
 }
 
-- (void)actionFinished {
-    // wlf - TODO:  待完善
-
-}
-
 - (UIViewController *)defaultSuitablePosterForSender:(UIViewController *)sender {
     UIViewController *container = sender?:[[[[UIApplication sharedApplication] delegate] window] rootViewController];
     while (container.presentedViewController) {
@@ -138,6 +139,27 @@ Class classForRouterKey(NSString *routerKey) {
         container = ((UINavigationController *)container).topViewController;
     }
     return container;
+}
+
+#pragma mark - SFRouterRunnerDelegate
+- (void)routerRunner:(SFRouterRunner *)runner openPage:(UIViewController *)pageVC sender:(id)sender {
+    [self openPage:pageVC sender:sender];
+}
+
+- (void)routerRunner:(SFRouterRunner *)runner willOpenPage:(UIViewController *)pageVC sender:(id)sender {
+    // wlf - TODO: 完善
+}
+
+- (void)routerRunner:(SFRouterRunner *)runner didOpenedPage:(UIViewController *)pageVC sender:(id)sender {
+    // wlf - TODO: 完善
+}
+
+- (void)routerRunner:(SFRouterRunner *)runner willCallAction:(nonnull NSInvocation *)invocation {
+    // wlf - TODO: 完善
+}
+
+- (void)routerRunner:(SFRouterRunner *)runner didCalledAction:(nonnull NSInvocation *)invocation {
+    // wlf - TODO: 完善
 }
 
 @end

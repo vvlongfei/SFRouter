@@ -8,7 +8,7 @@
 #ifndef SFRouterDefine_h
 #define SFRouterDefine_h
 
-#import "SFRouterPrivate.h"
+#import <SFRouter/SFRouterPrivate.h>
 
 extern void openPage(id sender, UIViewController *pageVC);
 extern Class classForRouterKey(NSString *routerKey);

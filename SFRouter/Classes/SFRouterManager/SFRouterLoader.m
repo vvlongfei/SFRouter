@@ -69,7 +69,7 @@ typedef NS_ENUM(NSUInteger, SFRouterDataType) {
     [self loadRouterDataForType:SFRouterDataTypeRouterRegister
                        checkKey:^BOOL(SFRouterKey routerKey, NSString *filePath) {
         NSAssert(routerKey.length > 0, @"路由key长度必须大于0，filePath:%@", filePath);
-        NSAssert(self.routerDataMap[routerKey] == nil, @"路由key重复，filePath1:%@, filePath2:%@", self.routerDataMap[routerKey].filePath, filePath);
+        NSAssert(self.routerDataMap[routerKey] == nil, @"路由key重复，routerKey:%@, filePath1:%@, filePath2:%@", routerKey, self.routerDataMap[routerKey].filePath, filePath);
         if (routerKey.length == 0 || self.routerDataMap[routerKey]) {
             return NO;; // 不记录key长度为0的路由、不记录重复的路由
         }
@@ -85,7 +85,7 @@ typedef NS_ENUM(NSUInteger, SFRouterDataType) {
     [self loadRouterDataForType:SFRouterDataTypeRouterCheck
                        checkKey:^BOOL(SFRouterKey routerKey, NSString *filePath) {
         NSAssert(routerKey.length > 0, @"路由引用key长度必须大于0，filePath:%@", filePath);
-        NSAssert(self.routerDataMap[routerKey], @"引用路由不存在 filePath:%@", filePath);
+        NSAssert(self.routerDataMap[routerKey], @"引用路由不存在 routerKey:%@, filePath:%@", routerKey, filePath);
         if (routerKey.length == 0 || !self.routerDataMap[routerKey]) {
             return NO;; // 不记录key长度为0的路由、不记录重复的路由
         }
@@ -124,6 +124,7 @@ typedef NS_ENUM(NSUInteger, SFRouterDataType) {
             infoItem.key = routerInfoKey;
             infoItem.keyDescription = routerInfo.keyDescription;
             infoItem.filePath = [NSString stringWithUTF8String:routerInfo.filePath];
+            infoItem.lineNum = infoItem.lineNum;
             infoItem.className = [self classNameFromMethod:routerInfo.method];
             infoItem.isAction = routerInfo.isAction;
             infoItem.selName = [NSString stringWithUTF8String:routerInfo.selName];

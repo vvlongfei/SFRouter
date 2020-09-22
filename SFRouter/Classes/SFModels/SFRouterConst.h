@@ -22,7 +22,7 @@ typedef struct _SFRouterInfo {
     __unsafe_unretained NSString *keyDescription;   ///< 路由描述
     BOOL isAction;          ///< 表明是页面路由还是方法路由
     
-    const char *method;           ///< 方法名，用于获取类名
+    const char *method;     ///< 方法名，用于获取类名
     char *filePath;         ///< 获取文件路径
     int lineNum;            ///< 路由对应函数
     
@@ -30,7 +30,7 @@ typedef struct _SFRouterInfo {
     char *returnTypeEncoding; ///< 返回值类型encode
     
     SFRouterParam *params;  ///< 参数列表
-    uint32_t paramsCount;    ///< 参数个数
+    uint32_t paramsCount;   ///< 参数个数
     
     char *selName;  ///< 方法名
 } SFRouterInfo;

@@ -10,6 +10,4 @@
 
 @interface SFViewController : UIViewController
 
-@property (nonatomic, copy, class) NSArray *arr; ///< <#注释#>
-
 @end

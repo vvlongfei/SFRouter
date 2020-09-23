@@ -11,17 +11,11 @@ Pod::Spec.new do |s|
   s.version          = '0.1.0'
   s.summary          = 'A short description of SFRouter.'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+      ios objective-c 路由，可以通过url、native两种调用方案，包含页面跳转、功能调用等，该路由方案有有借鉴与LJRouter方案。
                        DESC
 
-  s.homepage         = 'https://github.com/longfei/SFRouter'
+  s.homepage         = 'https://github.com/vvlongfei/SFRouter'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'longfei' => 'vvlongfei@163.com' }

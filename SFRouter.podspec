@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SFRouter'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SFRouter.'
+  s.summary          = 'SFRouter 是一个iOS oc 的路由方案，简单易用'
 
   s.description      = <<-DESC
       ios objective-c 路由，可以通过url、native两种调用方案，包含页面跳转、功能调用等，该路由方案有有借鉴与LJRouter方案。

@@ -80,16 +80,16 @@ extern NSString * const SFRouterDomain;
         int realValue = value.intValue;
         [invocation setArgument:&realValue atIndex:(index + 2)];
     } else if (strcmp(type, @encode(long)) == 0) {
-        long realValue = value.longLongValue;
+        long realValue = value.longValue;
         [invocation setArgument:&realValue atIndex:(index + 2)];
     } else if (strcmp(type, @encode(long long)) == 0) {
         long long realValue = value.longLongValue;
         [invocation setArgument:&realValue atIndex:(index + 2)];
     } else if (strcmp(type, @encode(short)) == 0) {
-        short realValue = value.intValue;
+        short realValue = value.shortValue;
         [invocation setArgument:&realValue atIndex:(index + 2)];
     } else if (strcmp(type, @encode(char)) == 0) {
-        char realValue = value.intValue;
+        char realValue = value.charValue;
         [invocation setArgument:&realValue atIndex:(index + 2)];
     } else if (strcmp(type, @encode(bool)) == 0) {
         BOOL realValue = value.boolValue;

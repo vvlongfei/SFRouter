@@ -92,7 +92,7 @@ typedef NS_ENUM(NSUInteger, SFRouterDataType) {
         return YES;
     } readerInfoItem:^(SFRouterKey routerKey, SFRouterInfoItem *infoItem) {
         SFRouterInfoItem *originInfoItem = self.routerDataMap[routerKey];
-        NSError *error = [infoItem checkEqualForInfoItem:originInfoItem];
+        __unused NSError *error = [infoItem checkEqualForInfoItem:originInfoItem];
         NSAssert(!error, error.localizedFailureReason);
     }];
 }

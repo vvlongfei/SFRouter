@@ -8,6 +8,11 @@
 #import "SFRouterManager.h"
 #import "SFRouterLoader.h"
 
+#define SF_Run_Block(block, ...) \
+if (block) {                     \
+    block(##__VA_ARGS__);        \
+}
+
 extern NSString * const SFRouterDomain;
 
 void openPage(id sender, UIViewController *pageVC) {
@@ -57,13 +62,25 @@ Class classForRouterKey(NSString *routerKey) {
 }
 
 - (BOOL)canRouterForUrl:(NSString *)url {
+    if (url.length == 0) {
+        return NO;
+    }
     NSURL *optUrl = nil;
     if (self.handleOpenUrlAspect) {
         optUrl = self.handleOpenUrlAspect(url);
     }
     if (!optUrl) {
         optUrl = [NSURL URLWithString:url];
+        if (!optUrl) {
+            // 如果生成URL为空，可能url中包含中文，则尝试进行中文编码后尝试
+            NSString *queryUrl = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]; // nsurl支持中文
+            optUrl = [NSURL URLWithString:queryUrl];
+        }
     }
+    if (!optUrl) {
+        return NO;
+    }
+    // wlf - TODO: 待优化
     if ([optUrl.scheme hasPrefix:@"http"]) {
         return self.openH5Page ? YES : NO;
     }
@@ -76,14 +93,36 @@ Class classForRouterKey(NSString *routerKey) {
 }
 
 - (void)routerForUrl:(NSString *)url data:(NSDictionary *)data sender:(id)sender {
+    NSParameterAssert(url.length > 0);
+    if (url.length == 0) {
+        if (self.handleOpenUrlFailed) {
+            self.handleOpenUrlFailed([NSError errorWithDomain:SFRouterDomain code:-1 userInfo:@{
+                NSLocalizedFailureReasonErrorKey:@"url 长度必须大于0"
+            }]);
+        }
+        return;
+    }
     NSURL *optUrl = nil;
-    url = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]; // nsurl支持中文
     if (self.handleOpenUrlAspect) {
         optUrl = self.handleOpenUrlAspect(url);
     }
     if (!optUrl) {
         optUrl = [NSURL URLWithString:url];
+        if (!optUrl) {
+            // 如果生成URL为空，可能url中包含中文，则尝试进行中文编码后尝试
+            NSString *queryUrl = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]; // nsurl支持中文
+            optUrl = [NSURL URLWithString:queryUrl];
+        }
     }
+    if (!optUrl) {
+        if (self.handleOpenUrlFailed) {
+            self.handleOpenUrlFailed([NSError errorWithDomain:SFRouterDomain code:-1 userInfo:@{
+                NSLocalizedFailureReasonErrorKey:[NSString stringWithFormat:@"请检查url规范性->url:%@", url]
+            }]);
+        }
+        return;
+    }
+    // wlf - TODO: 待优化
     if ([optUrl.scheme hasPrefix:@"http"]) {
         if (self.openH5Page) {
             self.openH5Page(optUrl);
